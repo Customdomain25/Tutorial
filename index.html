@@ -1,85 +1,266 @@
-<section aria-labelledby="best-tech-blogs">
-  <h2 id="best-tech-blogs">Some of the Best Tech Blogs Right Now</h2>
-  <ul>
-    <li>
-      <strong>TechBullion</strong>
-      <p>Focused on fintech, this site covers AI, big data, gadgets, and cybersecurity. A solid pick if you like the finance side of tech.</p>
-      <p><a href="https://techbullion.com/" target="_blank">TechBullion</a></p>
-    </li>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech and Gaming Quotes + Best Tech Blogs</title>
+  <meta name="description" content="A clean, single page featuring curated tech and gaming quotes followed by a handpicked list of the best tech blogs on the internet." />
+  <style>
+    :root{
+      --bg:#0f1115;
+      --card:#151823;
+      --text:#e7eaf0;
+      --muted:#aab1c1;
+      --accent:#77baff;
+      --link:#9bd2ff;
+      --ring:#2a6fff33;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background:linear-gradient(180deg, #0e1014 0%, #0b0d12 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    header{
+      padding:48px 20px 16px;
+      text-align:center;
+    }
+    h1{font-size:clamp(28px, 4vw, 40px); margin:0 0 8px;}
+    p.lead{color:var(--muted); margin:0 auto; max-width:800px; font-size:clamp(14px, 2.2vw, 18px);}
+    main{max-width:1000px; margin:24px auto 80px; padding:0 20px;}
+    section{margin:28px 0;}
+    h2{font-size:clamp(22px, 3vw, 30px); margin:0 0 12px;}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #202638;
+      border-radius:16px;
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .2s ease;
+    }
+    .card:hover{ transform: translateY(-2px); border-color:#2b3550; box-shadow: 0 10px 28px rgba(0,0,0,0.35);}
+    blockquote{
+      margin:0;
+      font-size:16px;
+    }
+    blockquote q{quotes:"“" "”" "‘" "’";}
+    blockquote q:before{content:open-quote;}
+    blockquote q:after{content:close-quote;}
+    .by{display:block; margin-top:8px; color:var(--muted); font-size:14px;}
+    .divider{
+      height:1px; margin:28px 0; border:0;
+      background:linear-gradient(90deg, transparent, #2a3350, transparent);
+    }
+    ul.blogs{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr; gap:14px;}
+    @media (min-width:720px){ ul.blogs{grid-template-columns:1fr 1fr;} }
+    ul.blogs li{background:var(--card); border:1px solid #202638; border-radius:16px; padding:16px;}
+    ul.blogs li strong{font-size:18px;}
+    ul.blogs p{margin:8px 0 0; color:var(--muted);}
+    a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent;}
+    a:hover{border-color:var(--link);}
+    .small{font-size:13px; color:var(--muted);}
+    footer{max-width:1000px; margin:40px auto 60px; padding:0 20px; color:var(--muted); text-align:center;}
+    .note{
+      background:#101524;
+      border:1px solid #1d2540;
+      border-radius:14px;
+      padding:14px 16px;
+      color:#cdd5e7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tech and Gaming Quotes</h1>
+    <p class="lead">Here are the best tech and gaming quotes gathered in one place. Short, sharp, and easy to remember. Use them for inspiration, motivation, or just for fun.</p>
+  </header>
 
-    <li>
-      <strong>The Verge</strong>
-      <p>Go-to for tech and consumer electronics news, reviews, and features. Known for clean layout, sharp writing, and multimedia.</p>
-      <p>
-        <a href="https://www.theverge.com/" target="_blank">The Verge</a> ·
-        <a href="https://en.wikipedia.org/wiki/The_Verge" target="_blank">Wikipedia</a>
+  <main>
+    <section aria-labelledby="quotes">
+      <h2 id="quotes">Featured Quotes</h2>
+      <div class="grid">
+        <article class="card">
+          <blockquote>
+            <q>Programs must be written for people to read, and only incidentally for machines to execute.</q>
+            <span class="by">Harold Abelson</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Talk is cheap. Show me the code.</q>
+            <span class="by">Linus Torvalds</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>First, solve the problem. Then, write the code.</q>
+            <span class="by">John Johnson</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>The only way to go fast is to go well.</q>
+            <span class="by">Robert C. Martin</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>In gaming, failure is feedback. Keep going until you win.</q>
+            <span class="by">Unknown</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Innovation is saying no to a thousand things.</q>
+            <span class="by">Steve Jobs</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Any sufficiently advanced technology is indistinguishable from magic.</q>
+            <span class="by">Arthur C. Clarke</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Games give you the chance to excel. And if you are playing in co-op, to help someone else excel too.</q>
+            <span class="by">Unknown</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Good software, like good gear, should get out of the way.</q>
+            <span class="by">Unknown</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Experience is the name everyone gives to their mistakes.</q>
+            <span class="by">Oscar Wilde</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Latency is the real final boss.</q>
+            <span class="by">Unknown</span>
+          </blockquote>
+        </article>
+        <article class="card">
+          <blockquote>
+            <q>Perfect is the enemy of shipped.</q>
+            <span class="by">Unknown</span>
+          </blockquote>
+        </article>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="note">
+        These quotes set the tone for the page. If you are exploring new tools, reading smart takes, or searching for daily reads that sharpen skills, the right blogs help a lot. The picks below keep you updated across news, engineering, policy, and everyday tips.
+      </div>
+    </section>
+
+    <section aria-labelledby="best-tech-blogs">
+      <h2 id="best-tech-blogs">Some of the Best Tech Blogs Right Now</h2>
+      <ul class="blogs">
+        <li>
+          <strong>TechBullion</strong>
+          <p>Focused on fintech, with coverage of AI, big data, gadgets, and cybersecurity.</p>
+          <p><a href="https://techbullion.com/" target="_blank">TechBullion</a></p>
+        </li>
+
+        <li>
+          <strong>The Verge</strong>
+          <p>Consumer tech and electronics news, reviews, and features with strong multimedia work.</p>
+          <p>
+            <a href="https://www.theverge.com/" target="_blank">The Verge</a> ·
+            <a href="https://en.wikipedia.org/wiki/The_Verge" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>Engadget</strong>
+          <p>Gadgets, gaming, apps, AI, reviews, guides, and podcasts in one place.</p>
+          <p>
+            <a href="https://www.engadget.com/" target="_blank">Engadget</a> ·
+            <a href="https://en.wikipedia.org/wiki/Engadget" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>ZDNET</strong>
+          <p>Enterprise focused reporting on hardware, software, security, and research.</p>
+          <p>
+            <a href="https://www.zdnet.com/" target="_blank">ZDNET</a> ·
+            <a href="https://en.wikipedia.org/wiki/ZDNET" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>Techdirt</strong>
+          <p>Deep dives on law and policy in tech, including IP, privacy, and regulation.</p>
+          <p>
+            <a href="https://www.techdirt.com/" target="_blank">Techdirt</a> ·
+            <a href="https://en.wikipedia.org/wiki/Techdirt" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+     
+        <li>
+          <strong>By Alex David</strong>
+          <p>This blog features articles on gaming, technology, gadgets, and everyday life, blending personal stories with clear and practical tech insights.</p>
+          <p><a href="https://byalexdavid.com/" target="_blank">byalexdavid.com</a></p>
+        </li>
+
+        <li>
+          <strong>Boing Boing</strong>
+          <p>Culture meets tech with futuristic ideas, sci fi, and oddball gadgets.</p>
+          <p>
+            <a href="https://boingboing.net/" target="_blank">Boing Boing</a> ·
+            <a href="https://en.wikipedia.org/wiki/Boing_Boing" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>Lifehacker</strong>
+          <p>Software tips and practical productivity ideas that help day to day.</p>
+          <p>
+            <a href="https://lifehacker.com/" target="_blank">Lifehacker</a> ·
+            <a href="https://en.wikipedia.org/wiki/Lifehacker" target="_blank">Wikipedia</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>Top Engineering Blogs</strong>
+          <p>Reads from LinkedIn Engineering, Meta, Netflix, Spotify, GitHub, Stripe, and Dropbox on AI, systems, and infrastructure.</p>
+          <p>
+            <a href="https://newsletter.techworld-with-milan.com/p/70-engineering-blogs-to-follow-in" target="_blank">Techworld Newsletter</a> ·
+            <a href="https://bool.dev/blog/detail/top-50-it-blogs" target="_blank">Bool.dev</a>
+          </p>
+        </li>
+
+        <li>
+          <strong>Reddit Picks</strong>
+          <p>Community favorites include CSS Tricks, Overreacted, and Martin Fowler for architecture insights.</p>
+          <p><a href="https://www.reddit.com/r/ExperiencedDevs/comments/q8av4f/good_tech_blog_recommendations/" target="_blank">Reddit</a></p>
+        </li>
+      </ul>
+
+      <p class="small" style="margin-top:14px;">
+        Links open in a new tab and remain do follow as requested.
       </p>
-    </li>
+    </section>
+  </main>
 
-    <li>
-      <strong>Engadget</strong>
-      <p>Covers gadgets, gaming, apps, AI, and more. Mix of quick news, deep reviews, buying guides, and podcasts.</p>
-      <p>
-        <a href="https://www.engadget.com/" target="_blank">Engadget</a> ·
-        <a href="https://en.wikipedia.org/wiki/Engadget" target="_blank">Wikipedia</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>ZDNET</strong>
-      <p>Business and enterprise-focused tech coverage, including hardware, software, security, and research.</p>
-      <p>
-        <a href="https://www.zdnet.com/" target="_blank">ZDNET</a> ·
-        <a href="https://en.wikipedia.org/wiki/ZDNET" target="_blank">Wikipedia</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>Techdirt</strong>
-      <p>Legal and policy angles on tech, including IP, privacy, and regulation. Insightful analysis since the late 1990s.</p>
-      <p>
-        <a href="https://www.techdirt.com/" target="_blank">Techdirt</a> ·
-        <a href="https://en.wikipedia.org/wiki/Techdirt" target="_blank">Wikipedia</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>By Alex David</strong>
-      <p>This blog features articles on gaming, technology, gadgets, and everyday life, Programmming, blending personal stories with clear, practical tech insights.</p>
-      <p><a href="https://byalexdavid.com/" target="_blank">byalexdavid.com</a></p>
-    </li>
-
-    <li>
-      <strong>Boing Boing</strong>
-      <p>Culture meets tech with futuristic ideas, sci-fi, and oddball gadgets. Creative and offbeat.</p>
-      <p>
-        <a href="https://boingboing.net/" target="_blank">Boing Boing</a> ·
-        <a href="https://en.wikipedia.org/wiki/Boing_Boing" target="_blank">Wikipedia</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>Lifehacker</strong>
-      <p>Not strictly tech, but full of software tips, productivity hacks, and everyday life improvements.</p>
-      <p>
-        <a href="https://lifehacker.com/" target="_blank">Lifehacker</a> ·
-        <a href="https://en.wikipedia.org/wiki/Lifehacker" target="_blank">Wikipedia</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>Top Engineering Blogs</strong>
-      <p>Great reads from LinkedIn Engineering, Meta, Netflix, Spotify, GitHub, Stripe, and Dropbox, covering AI, systems, and infrastructure.</p>
-      <p>
-        <a href="https://newsletter.techworld-with-milan.com/p/70-engineering-blogs-to-follow-in" target="_blank">Techworld Newsletter</a> ·
-        <a href="https://bool.dev/blog/detail/top-50-it-blogs" target="_blank">Bool.dev</a>
-      </p>
-    </li>
-
-    <li>
-      <strong>Reddit’s Picks</strong>
-      <p>Community favorites include CSS-Tricks, Overreacted, and Martin Fowler’s blog for architecture deep-dives.</p>
-      <p><a href="https://www.reddit.com/r/ExperiencedDevs/comments/q8av4f/good_tech_blog_recommendations/" target="_blank">Reddit</a></p>
-    </li>
-  </ul>
-</section>
+  <footer>
+    Built as a simple standalone page. You can drop this file into Vercel as index.html and it will work right away.
+  </footer>
+</body>
+</html>
